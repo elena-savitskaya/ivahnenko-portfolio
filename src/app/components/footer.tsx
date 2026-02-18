@@ -19,6 +19,7 @@ export default function Footer() {
               href="https://www.instagram.com/ivahnenko_serhii?igsh=aHVpN3IyYTgycWo0"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram Ivahnenko Sergii"
             >
               <Image
                 src="/instagram.svg"
@@ -33,6 +34,7 @@ export default function Footer() {
               href="https://www.facebook.com/share/1EtGK6twdY/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Facebook Ivahnenko Sergii"
             >
               <Image
                 src="/facebook.svg"
@@ -46,9 +48,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="pt-4 flex flex-col md:flex-row justify-between items-center gap-2">
-          <p className="text-sm text-secondary">
+          <span className="text-sm text-secondary">
             © {new Date().getFullYear()}
-          </p>
+          </span>
           <p className="text-sm text-secondary">Всі права захищені</p>
         </div>
       </div>

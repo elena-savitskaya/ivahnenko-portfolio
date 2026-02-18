@@ -76,12 +76,16 @@ export default function Navbar() {
                       +380666324347
                     </a>
                   </p>
-
                   <motion.button
                     onClick={toggleTheme}
                     className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
+                    aria-label={
+                      theme === "dark"
+                        ? "Увімкнути світлу тему"
+                        : "Увімкнути темну тему"
+                    }
                   >
                     {theme === "dark" ? (
                       <SunIcon className="h-5 w-5" />
@@ -123,6 +127,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               className="hidden lg:flex items-center gap-2"
+              aria-label="Instagram Ivahnenko Sergii"
             >
               <Image
                 src="/instagram.svg"
@@ -214,6 +219,7 @@ export default function Navbar() {
                     delay: (menuItems.length + 2) * 0.1,
                     duration: 0.3,
                   }}
+                  aria-label="Instagram Ivahnenko Sergii"
                   className="flex items-center gap-2"
                 >
                   <Image
@@ -243,6 +249,11 @@ export default function Navbar() {
                     toggleTheme();
                     setIsMobileMenuOpen(false);
                   }}
+                  aria-label={
+                    theme === "dark"
+                      ? "Увімкнути світлу тему"
+                      : "Увімкнути темну тему"
+                  }
                   className="flex items-center gap-2 p-2 hover:text-primary transition-colors"
                 >
                   {theme === "dark" ? (

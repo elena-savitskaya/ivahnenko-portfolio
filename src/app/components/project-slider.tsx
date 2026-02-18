@@ -65,7 +65,6 @@ export default function ProjectSlider({
               />
             </div>
           ))}
-
           <button
             onClick={() => instanceRef.current?.prev()}
             aria-label="Попередній слайд"
