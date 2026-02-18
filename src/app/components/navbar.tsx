@@ -131,7 +131,7 @@ export default function Navbar() {
             >
               <Image
                 src="/instagram.svg"
-                alt="instagram"
+                alt=""
                 width={24}
                 height={24}
                 className="object-cover object-center hover:scale-110 transition-transform"
@@ -224,7 +224,7 @@ export default function Navbar() {
                 >
                   <Image
                     src="/instagram.svg"
-                    alt="instagram"
+                    alt=""
                     width={24}
                     height={24}
                     className="object-cover object-center hover:scale-110 transition-transform"

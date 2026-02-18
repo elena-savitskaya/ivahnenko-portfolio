@@ -23,7 +23,7 @@ export default function Footer() {
             >
               <Image
                 src="/instagram.svg"
-                alt="instagram"
+                alt=""
                 width={22}
                 height={22}
                 className="object-cover object-center hover:scale-110 transition-transform"

@@ -71,6 +71,7 @@ export default function ProjectSlider({
             className="absolute left-4 top-1/2 -translate-y-1/2 bg-white dark:bg-dark text-dark dark:text-white p-3 rounded-full shadow-md hover:scale-110 transition z-10"
           >
             <FaChevronLeft size={20} />
+            <span className="sr-only">Попередній слайд</span>
           </button>
           <button
             onClick={() => instanceRef.current?.next()}
@@ -78,6 +79,7 @@ export default function ProjectSlider({
             className="absolute right-4 top-1/2 -translate-y-1/2 bg-white dark:bg-dark text-dark dark:text-white p-3 rounded-full shadow-md hover:scale-110 transition z-10"
           >
             <FaChevronRight size={20} />
+            <span className="sr-only">Наступний слайд</span>
           </button>
         </div>
       </motion.div>
