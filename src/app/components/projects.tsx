@@ -68,10 +68,7 @@ export default function Projects() {
                     alt="project"
                     className="object-cover"
                     fill
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                    }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw,33vw"
                   />
                 </div>
               </motion.div>

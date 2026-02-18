@@ -1,7 +1,7 @@
 "use client";
 
-import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
+import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";

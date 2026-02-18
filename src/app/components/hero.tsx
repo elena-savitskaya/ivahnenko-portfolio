@@ -62,10 +62,10 @@ export default function Hero() {
             <div className="image-shadow" />
             <div className="w-full h-full overflow-hidden shadow-xl rounded-lg relative">
               <Image
-                src="/profile.png"
+                src="/profile.webp"
                 alt="Сергій Івахненко"
                 fill
-                sizes="100%"
+                sizes="(max-width: 768px) 200px, 336px"
                 className="object-cover"
                 priority
               />

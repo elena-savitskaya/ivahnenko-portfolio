@@ -36,7 +36,7 @@ export default function Navbar() {
               <Link href="/" className="flex items-center gap-2">
                 <div className="w-14 h-16 relative overflow-hidden">
                   <Image
-                    src="/logo.png"
+                    src="/logo.webp"
                     alt="logo"
                     fill
                     sizes="56px"

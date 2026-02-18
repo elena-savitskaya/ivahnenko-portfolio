@@ -19,7 +19,7 @@ export default function AboutPage() {
               {...fadeInUp}
             >
               <Image
-                src="/about.png"
+                src="/about.webp"
                 alt="image"
                 className="object-cover"
                 fill
