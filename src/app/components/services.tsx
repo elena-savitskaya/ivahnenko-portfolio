@@ -33,7 +33,7 @@ export default function Services() {
               >
                 <Image
                   src={category.icon}
-                  alt={category.title}
+                  alt={`Іконка категорії ${category.title}`}
                   style={{
                     width: "60px",
                     height: "60px",

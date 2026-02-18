@@ -68,12 +68,14 @@ export default function ProjectSlider({
 
           <button
             onClick={() => instanceRef.current?.prev()}
+            aria-label="Попередній слайд"
             className="absolute left-4 top-1/2 -translate-y-1/2 bg-white dark:bg-dark text-dark dark:text-white p-3 rounded-full shadow-md hover:scale-110 transition z-10"
           >
             <FaChevronLeft size={20} />
           </button>
           <button
             onClick={() => instanceRef.current?.next()}
+            aria-label="Наступний слайд"
             className="absolute right-4 top-1/2 -translate-y-1/2 bg-white dark:bg-dark text-dark dark:text-white p-3 rounded-full shadow-md hover:scale-110 transition z-10"
           >
             <FaChevronRight size={20} />

@@ -65,9 +65,10 @@ export default function Projects() {
                 <div className="h-[400px] relative">
                   <Image
                     src={project.image}
-                    alt="project"
+                    alt={project.title}
                     className="object-cover"
                     fill
+                    loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw,33vw"
                   />
                 </div>
