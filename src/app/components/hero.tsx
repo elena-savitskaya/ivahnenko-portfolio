@@ -24,16 +24,14 @@ export default function Hero() {
               >
                 Сергій!
               </motion.span>
-              <br />
-              Скульптор
             </motion.h1>
             <motion.p
               className="text-lg md:text-xl font-medium text-gray-700 dark:text-gray-300"
               {...fadeInUp}
               transition={{ delay: 0.4 }}
             >
-              Створюю на замовлення скульптури, арт-об’єкти та предмети декору з
-              гіпсу. Спеціалізуюсь на ліпнині, 3D панелях, кутових елементах.
+              Я створюю на замовлення скульптури, арт-об’єкти та предмети декору
+              з гіпсу. Спеціалізуюсь на ліпнині, 3D панелях, кутових елементах.
             </motion.p>
             <motion.p
               className="uppercase text-gray-500 font-semibold"
@@ -42,6 +40,14 @@ export default function Hero() {
             >
               <span className="pr-2 text-lg">15+</span>
               <span className="pr-2 text-sm">років досвіду</span>
+            </motion.p>
+            <motion.p
+              className="uppercase text-gray-500 font-semibold"
+              {...fadeInUp}
+              transition={{ delay: 0.45 }}
+            >
+              <span className="pr-2 text-lg">200</span>
+              <span className="pr-2 text-sm">реалізованих проєктів</span>
             </motion.p>
             <motion.div
               {...fadeInUp}

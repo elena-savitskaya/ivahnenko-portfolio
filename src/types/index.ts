@@ -10,3 +10,9 @@ export interface Categories {
   title: string;
   previewImage: string;
 }
+
+export interface Process {
+  icon: string;
+  title: string;
+  description: string;
+}
