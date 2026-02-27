@@ -1,11 +1,21 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/utils/animations";
-import { process } from "@/contents/process";
+import { processItems } from "@/contents/process";
+import { useState } from "react";
+import ProcessItem from "./process-item";
+import type { Process } from "@/types";
 
 export default function Process() {
+  const [activeIndexes, setActiveIndexes] = useState<number[]>([]);
+
+  const toggleItem = (index: number) => {
+    setActiveIndexes((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index],
+    );
+  };
+
   return (
     <section className="section">
       <div className="container flex flex-col gap-6">
@@ -21,30 +31,20 @@ export default function Process() {
             фінального монтажу.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          {process.map((item, index) => (
-            <motion.div
-              key={index}
-              className="bg-white dark:bg-dark/30 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow hover:shadow-lg transition-all flex flex-col items-center text-center gap-4"
-              whileHover={{ scale: 1.05 }}
-              {...fadeInUp}
+        <div className="flex flex-col">
+          {processItems.map((item, index) => (
+            <ProcessItem
+              key={item.title}
+              title={item.title}
+              isOpen={activeIndexes.includes(index)}
+              onClick={() => toggleItem(index)}
             >
-              <Image
-                src={item.icon}
-                alt={`Іконка категорії ${item.title}`}
-                style={{
-                  width: "80px",
-                  height: "80px",
-                }}
-                width={80}
-                height={80}
-                loading="lazy"
-              />
-              <div className="flex flex-col gap-2">
-                <p className="text-md font-bold">{item.title}</p>
-                <p className="text-md font-medium">{item.description}</p>
-              </div>
-            </motion.div>
+              <ul className="list-disc pl-5 flex flex-col gap-2">
+                {item.items.map((text) => (
+                  <li key={text}>{text}</li>
+                ))}
+              </ul>
+            </ProcessItem>
           ))}
         </div>
       </div>

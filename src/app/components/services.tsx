@@ -27,7 +27,7 @@ export default function Services() {
             <Link key={index} href={`/portfolio?category=${category.id}`}>
               <motion.div
                 key={index}
-                className="h-[180px] bg-white dark:bg-dark/30 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow hover:shadow-lg transition-all flex flex-col items-center text-center gap-4"
+                className="h-full bg-white dark:bg-dark/30 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow hover:shadow-lg transition-all flex flex-col items-center text-center gap-4"
                 whileHover={{ scale: 1.05 }}
                 {...fadeInUp}
               >
@@ -42,7 +42,10 @@ export default function Services() {
                   height={60}
                   loading="lazy"
                 />
-                <p className="text-md font-medium">{category.title}</p>
+                <div className="flex flex-col gap-2">
+                  <p className="text-md font-bold">{category.title}</p>
+                  <p className="text-md font-medium">{category.description}</p>
+                </div>
               </motion.div>
             </Link>
           ))}

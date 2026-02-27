@@ -8,11 +8,11 @@ export interface Categories {
   id: string;
   icon: string;
   title: string;
+  description: string;
   previewImage: string;
 }
 
 export interface Process {
-  icon: string;
   title: string;
-  description: string;
+  items: string[];
 }
