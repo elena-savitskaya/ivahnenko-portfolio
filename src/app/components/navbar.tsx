@@ -153,7 +153,7 @@ export default function Navbar() {
             className="fixed left-0 right-0 bottom-0 top-[103px] z-50 bg-white dark:bg-dark overflow-y-auto lg:hidden"
           >
             <div className="container h-full py-4 flex flex-col justify-between gap-4">
-              <div className="flex flex-col items-center justify-center gap-6">
+              <div className="flex flex-col items-center justify-center gap-5">
                 {menuItems.map((item, index) => (
                   <motion.div
                     key={item.href}
@@ -171,7 +171,6 @@ export default function Navbar() {
                     </Link>
                   </motion.div>
                 ))}
-
                 <p className="flex flex-col items-center justify-center">
                   <span className="text-[12px] text-secondary">
                     Написати мені
@@ -224,7 +223,6 @@ export default function Navbar() {
                 <button
                   onClick={() => {
                     toggleTheme();
-                    setIsMobileMenuOpen(false);
                   }}
                   aria-label={
                     theme === "dark"
