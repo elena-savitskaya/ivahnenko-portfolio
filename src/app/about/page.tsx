@@ -11,11 +11,11 @@ export default function AboutPage() {
         <motion.h1 className="text-4xl font-bold text-center" {...fadeInDown}>
           Кілька слів про мене
         </motion.h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="relative w-full h-[400px] md:h-[500px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <div className="relative w-full">
             <div className="image-shadow" />
             <motion.div
-              className="w-full h-[700px] relative overflow-hidden rounded-lg"
+              className="w-full md:h-[700px] h-[600px] relative overflow-hidden rounded-lg"
               {...fadeInUp}
             >
               <Image
@@ -32,7 +32,7 @@ export default function AboutPage() {
             </motion.div>
           </div>
           <motion.div
-            className="flex flex-col gap-6 text-lg leading-relaxed"
+            className="flex flex-col gap-6 text-lg leading-relaxed py-5"
             {...fadeInUp}
           >
             <h2 className="text-2xl md:text-3xl font-semibold text-primary">
