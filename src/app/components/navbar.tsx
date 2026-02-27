@@ -149,18 +149,18 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="fixed left-0 right-0 bottom-0 top-[103px] z-50 bg-white dark:bg-dark overflow-y-auto lg:hidden"
           >
             <div className="container h-full py-4 flex flex-col justify-between gap-4">
-              <div className="flex flex-col items-center justify-start gap-2">
+              <div className="flex flex-col items-center justify-center gap-6">
                 {menuItems.map((item, index) => (
                   <motion.div
                     key={item.href}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ delay: index * 0.1, duration: 0.3 }}
+                    initial={{ opacity: 0, y: -5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -5 }}
+                    transition={{ delay: index * 0.05, duration: 0.25 }}
                   >
                     <Link
                       href={item.href}
@@ -171,13 +171,8 @@ export default function Navbar() {
                     </Link>
                   </motion.div>
                 ))}
-                <motion.p
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ delay: menuItems.length * 0.1, duration: 0.3 }}
-                  className="flex flex-col items-center justify-center py-4"
-                >
+
+                <p className="flex flex-col items-center justify-center">
                   <span className="text-[12px] text-secondary">
                     Написати мені
                   </span>
@@ -187,17 +182,8 @@ export default function Navbar() {
                   >
                     isergo436@gmail.com
                   </a>
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{
-                    delay: (menuItems.length + 1) * 0.1,
-                    duration: 0.3,
-                  }}
-                  className="flex flex-col items-center justify-center py-4"
-                >
+                </p>
+                <p className="flex flex-col items-center justify-center">
                   <span className="text-[12px] text-secondary">
                     Зателефонувати мені
                   </span>
@@ -207,17 +193,17 @@ export default function Navbar() {
                   >
                     +380666324347
                   </a>
-                </motion.p>
+                </p>
                 <motion.a
                   href="https://www.instagram.com/ivahnenko_serhii?igsh=aHVpN3IyYTgycWo0"
                   target="_blank"
                   rel="noopener noreferrer"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, y: -5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -5 }}
                   transition={{
-                    delay: (menuItems.length + 2) * 0.1,
-                    duration: 0.3,
+                    delay: 5,
+                    duration: 0.25,
                   }}
                   aria-label="Instagram Ivahnenko Sergii"
                   className="flex items-center gap-2"
@@ -234,16 +220,7 @@ export default function Navbar() {
                 </motion.a>
               </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{
-                  delay: (menuItems.length + 3) * 0.1,
-                  duration: 0.3,
-                }}
-                className="flex items-center justify-end"
-              >
+              <div className="flex items-center justify-end">
                 <button
                   onClick={() => {
                     toggleTheme();
@@ -262,7 +239,7 @@ export default function Navbar() {
                     <MoonIcon className="h-5 w-5" />
                   )}
                 </button>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         )}

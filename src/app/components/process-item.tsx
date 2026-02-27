@@ -37,7 +37,7 @@ export default function ProcessItem({
   return (
     <div
       className={clsx(
-        "py-6 border-t-1 border-t-gray-200 dark:border-t-gray-800 shadow-md",
+        "md:p-6 p-4 border-t-gray-200 dark:border-t-gray-800 shadow-md",
         isOpen && "active",
       )}
     >
@@ -46,10 +46,10 @@ export default function ProcessItem({
         className="cursor-pointer flex w-full items-center justify-between gap-2 text-left"
       >
         <h3 className="text-md font-bold">{title}</h3>
-        <span className="hover:bg-gray-100 dark:hover:bg-gray-800 w-10 h-10 min-w-10 min-h-10 flex items-center justify-center rounded-full transition-transform">
+        <span className="hover:bg-gray-100 dark:hover:bg-gray-800 p-2 flex items-center justify-center rounded-full transition-colors">
           <ChevronDownIcon
             className={clsx(
-              "h-6 w-6 transition-transform duration-500 ease-in-out",
+              "h-5 w-5 transition-transform duration-500 ease-in-out",
               isOpen && "rotate-180",
             )}
           />
