@@ -45,7 +45,7 @@ export default function ProcessItem({
         onClick={onClick}
         className="cursor-pointer flex w-full items-center justify-between gap-2 text-left"
       >
-        <h5 className="text-md font-bold">{title}</h5>
+        <h3 className="text-md font-bold">{title}</h3>
         <span className="hover:bg-gray-100 dark:hover:bg-gray-800 w-10 h-10 min-w-10 min-h-10 flex items-center justify-center rounded-full transition-transform">
           <ChevronDownIcon
             className={clsx(

@@ -43,7 +43,7 @@ export default function Services() {
                   loading="lazy"
                 />
                 <div className="flex flex-col gap-2">
-                  <p className="text-md font-bold">{category.title}</p>
+                  <h3 className="text-md font-bold">{category.title}</h3>
                   <p className="text-md font-medium">{category.description}</p>
                 </div>
               </motion.div>
